@@ -1,10 +1,11 @@
-0x0 - nothing
-0x1 - <length> 
-    Prints the next <length> bytes to STDOUT
-0x2 - <varAddress>
-    Prints the content at varAdrress to STDOUT (kinda broken i think)
-0x3 - <location> <value>
-    Sets memory at location <location> to <value>
+Misc:
+    0x0 - nothing
+    0x1 - <length> 
+        Prints the next <length> bytes to STDOUT
+    0x2 - <varAddress>
+        Prints the content at varAdrress to STDOUT (kinda broken i think)
+    0x3 - <location> <value>
+        Sets memory at location <location> to <value>
 
 Math:
 
