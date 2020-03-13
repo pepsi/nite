@@ -1,0 +1,6 @@
+set 0 256123123
+set 1 612312
+mul 0 1 2
+prv 2
+
+print HiZaneIDidPrinting
