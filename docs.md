@@ -1,3 +1,12 @@
+File extension:
+
+    .ns
+        Nite source - Plain text source code
+    .nc 
+        Nite Compiled - Compiled bytecode for nite
+    .ni
+        Deprecated file extension, short for Nite
+
 Misc:
 
     0x0 - nothing
