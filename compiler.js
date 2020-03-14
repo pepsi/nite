@@ -68,6 +68,19 @@ fs.readFile('source.ns', (err, data )=> {
              bytecode+="\x01" + String.fromCharCode(message.length) + message
              
          }
+         if(token == 'define'){
+             const methodName = nextToken()
+             bytecode+="\x08" + String.fromCharCode(methodName)
+
+         }
+         if(token == 'goto'){
+            const methodName = nextToken()
+            bytecode+="\x09" + String.fromCharCode(methodName)
+
+        }
+        if(token == 'end'){
+            bytecode+="\x0a"
+        }
 
         if(token == 'prv'){
             const address = nextToken()

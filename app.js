@@ -1,4 +1,5 @@
  let memory = {}
+ let defines = {}
  for(i = 0; i < 128; i++){
     memory[i] = '\x00'
  }
@@ -64,6 +65,17 @@ function hexdump(buffer, blockSize) {
         const address2    = next();
         const destination = next();
         memory[destination.charCodeAt(0)] = memory[address1.charCodeAt(0)] / memory[address2.charCodeAt(0)];
+    },
+    '\x08': function(next){
+        const methodID = next()
+        defines[methodID] = index;
+        while(next() != "\x0a"){
+            console.log('next is not end')   
+        }
+    },
+    '\x09': function(next){
+        const methodID = next();
+        index = defines[methodID];
     }
  }
  const fs = require('fs')
